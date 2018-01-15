@@ -1,0 +1,12 @@
+<html>
+<head>
+	<title>QMUL Protein Portal</title>
+</head>
+<body>
+	<h1>QMUL Protein Portal</h1>
+	<form method="POST">
+		{{ form.csrf_token }}
+		{{ form.protein_name.label }} {{ form.protein_name() }}
+		{{ form.submit() }}
+	</form>
+</body>
