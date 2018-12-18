@@ -15,12 +15,14 @@ protein_table_filename = 'protein_table.tsv'
 def index():
 	return 'Welcome to the QMUL protein portal!'
 
-# define a route called 'protein' which accepts a protein name parameter
+# define a route called 'protein' that accepts a protein name parameter
 @app.route('/protein/<protein_name>')
 def protein(protein_name):
 
 	# load protein data from TSV file into pandas dataframe with protein name as index
 	df = pd.read_csv(protein_table_filename,sep='\t',index_col=1)
+
+	protein_name = protein_name.upper()  # ensure name is in capital letters
 
 	try:  # try to extract row for specified protein
 		row = df.loc[protein_name]
@@ -32,7 +34,7 @@ def protein(protein_name):
 		+ '<img src="' + row.Image_URL + '" height="200" width="200">'
 	except:
 		# if protein is not found a key error is thrown and we end up here
-		return 'We can\'t find any information about a protein called ' + protein_name + '.'
+		return "We can't find any information about a protein called %s." % protein_name
 
 # start the wb server
 if __name__ == '__main__':

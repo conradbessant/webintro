@@ -1,5 +1,5 @@
 # Simple example of a web applicaton
-# pp02: Hello world
+# pp01: Hello world
 
 from flask import Flask
 
