@@ -1,4 +1,4 @@
-# Simple example of a web applicaton
+# Simple example of a web application
 # pp05: Now with a form to enter protein name
 
 from flask import Flask, render_template, url_for, redirect
@@ -52,6 +52,6 @@ def protein(protein_name):
 		# if protein is not found a key error is thrown and we end up here
 		return "We can't find any information about a protein called %s." % protein_name
 
-# start the wb server
+# start the web server
 if __name__ == '__main__':
 	app.run(debug=True)

@@ -1,4 +1,4 @@
-# Simple example of a web applicaton
+# Simple example of a web application
 # pp02: Now with basic protein route
 
 from flask import Flask
@@ -17,6 +17,6 @@ def protein(protein_name):
 	protein_name = protein_name.upper()  # ensure name is in capital letters
 	return "We don't have any information about a protein called %s." % protein_name
 
-# start the wb server
+# start the web server
 if __name__ == '__main__':
 	app.run(debug=True)

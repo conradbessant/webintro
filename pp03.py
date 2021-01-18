@@ -1,4 +1,4 @@
-# Simple example of a web applicaton
+# Simple example of a web application
 # pp03: Now with informative protein route
 
 from flask import Flask
@@ -36,6 +36,6 @@ def protein(protein_name):
 		# if protein is not found a key error is thrown and we end up here
 		return "We can't find any information about a protein called %s." % protein_name
 
-# start the wb server
+# start the web server
 if __name__ == '__main__':
 	app.run(debug=True)

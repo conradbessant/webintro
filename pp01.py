@@ -1,4 +1,4 @@
-# Simple example of a web applicaton
+# Simple example of a web application
 # pp01: Hello world
 
 from flask import Flask
@@ -11,6 +11,6 @@ app = Flask(__name__)
 def index():
 	return 'Welcome to the QMUL protein portal!'
 
-# start the wb server
+# start the web server
 if __name__ == '__main__':
 	app.run(debug=True)
