@@ -7,7 +7,7 @@ import pandas as pd
 # import libraries needed create and process forms
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
-from wtforms.validators import Required
+from wtforms.validators import InputRequired
 
 # create a flask application object
 app = Flask(__name__)
@@ -19,7 +19,7 @@ protein_table_filename = 'protein_table.tsv'
 
 # create a class to define the form
 class QueryForm(FlaskForm):
-	protein_name = StringField('Enter a valid UniProt protein name:', validators=[Required()])
+	protein_name = StringField('Enter a valid UniProt protein name:', validators=[InputRequired()])
 	submit = SubmitField('Submit')
 
 # define the action for the top level route
